@@ -14,8 +14,7 @@ deadline, and his part to make it work by then.
 After work there is a Linux server at home, and it is never finished: mail,
 backups, Nextcloud, Home Assistant, a dozen other services, and now a
 workplace for AI. Anything he has to do twice, he will spend an evening
-making sure nobody does by hand again. The habit predates the AI by a long
-way, and not all of its practice was at work.
+making sure nobody does by hand again. The habit is much older than the AI.
 
 In 2026 the way he works changed. He brings the problem, the constraints
 and the decisions; the AI brings the typing, the research and the
@@ -32,20 +31,18 @@ it reads first, a status it updates last, every decision with its reason.
 It is meant to be useful enough to argue with and fallible enough to check,
 and it is checked.
 
-The name came first, the meaning later: prefer the
-design that will still be boring to understand at two in the morning, five
-months from now. Most days, that means saying no.
+The name came first, the meaning later: prefer the design that will still
+be boring to understand at two in the morning, five months from now. Most
+days, that means saying no.
 
 ## How it started
 
-Wald had watched AI arrive in software development, but in his niche,
-Dynamics 365 development, it had not yet arrived in full force.
-
-In mid-September 2026 the kindergarten needed its website moved to
-WordPress, away from a hosting setup spread over two providers that nobody
-fully understood any more. He had no
-wish to learn WordPress, so he tried the thing everybody was talking about.
-It went remarkably well.
+AI had arrived in software development, but not yet in Wald's daily work,
+Dynamics 365 development. His first real try came from elsewhere. In
+mid-September 2026 the kindergarten needed its website moved to WordPress, away from a hosting setup spread over two
+providers that nobody fully understood any more. He had no wish to learn
+WordPress, so he tried the thing everybody was talking about. It went
+remarkably well.
 
 Next, the kindergarten needed a mailing list. Asked for a crocodile short
 enough for a subject line, ChatGPT offered `<^===>`; Wald shortened it to
@@ -58,8 +55,8 @@ came out of that work besides the mail. One was a written agreement between
 the two of them: who decides, who types, what is never delegated. The other
 was the need for a place where the AI could work and remember. The
 agreement became the handbook every Pond reads first; the place became the
-Crocodile in late September, and around it the Pond family, about five weeks
-after the first website.
+Crocodile in late September. Around it grew the Pond family, first published
+five weeks after the website.
 
 How that went, and the decisions it produced:
 [why this exists](https://github.com/the-boring-crocodile/boring-pond/blob/main/docs/story.md).
@@ -77,24 +74,35 @@ first conversation. The parts:
 | | |
 |---|---|
 | [boring-crocodile](https://github.com/the-boring-crocodile/boring-crocodile) | The Crocodile: Ponds, sign-in, commands, long-running jobs |
-| [boring-services](https://github.com/the-boring-crocodile/boring-services) | A drawing board, a shared notebook, a fish stall for files, a D365 code index |
+| [boring-services](https://github.com/the-boring-crocodile/boring-services) | A drawing board, a shared notebook, a fish stall for files, a D365 code index, and a gateway that bundles them |
 | [boring-pirates](https://github.com/the-boring-crocodile/boring-pirates) | Local AI agents with their own accounts, for work a Pond hands off |
-| [boring-pondnt](https://github.com/the-boring-crocodile/boring-pondnt) | The same idea on Windows, for Copilot in Visual Studio |
+| [boring-pondnt](https://github.com/the-boring-crocodile/boring-pondnt) | The same idea on Windows: D365 F&O/SCM tools for Copilot in Visual Studio |
 | [boring-pond-common](https://github.com/the-boring-crocodile/boring-pond-common) | The libraries they share |
+
+For D365 F&O/SCM developers, pondNT is usually the place to start: a source
+and label index, compiler diagnostics and SQL on the development VM.
+Copilot's commands there run elevated, as the developer.
+[pondNT's overview](https://github.com/the-boring-crocodile/boring-pondnt/blob/main/README.md).
 
 The fine print, up front: a Pond is trusted like a person with an account on
 your machine, no more, no less. An AI remembers nothing between
 conversations; what carries over is what it wrote down. Things break; we
 rehearse the breaking first.
 
+Where to begin: [getting started](https://github.com/the-boring-crocodile/boring-pond/blob/main/docs/getting-started.md).
+
 ### The mailstack
 
 **[boring-mailstack](https://github.com/the-boring-crocodile/boring-mailstack)**:
 a self-hosted mail stack for a small office or home, and the first real
-project we built together. Your mail stays with your providers; the stack mirrors it,
-remembers where a person filed each mail so that changed filters never undo
-it, and makes Roundcube the mail front of your Nextcloud. Releases are
-rehearsed against a demo office that lives entirely in email.
+project we built together. Your mail stays with your providers; the stack
+mirrors it, remembers where a person filed each mail so that changed filters
+never undo it, and makes Roundcube the mail front of your Nextcloud.
+Releases are rehearsed against a demo office that lives entirely in email;
+`tools/demo up` starts it on your machine
+([try it](https://github.com/the-boring-crocodile/boring-mailstack#try-it)).
+
+---
 
 All the code is AGPL; the Pond's docs are CC BY-SA and its sample handbooks
 public domain. What you make with any of it is yours.
