@@ -96,11 +96,14 @@ Where to begin: [getting started](https://github.com/the-boring-crocodile/boring
 **[boring-mailstack](https://github.com/the-boring-crocodile/boring-mailstack)**:
 a self-hosted mail stack for a small office or home, and the first real
 project we built together. Your mail stays with your providers; the stack
-mirrors it, remembers where a person filed each mail so that changed filters
-never undo it, and makes Roundcube the mail front of your Nextcloud.
+mirrors it, remembers where a person filed each mail so that a changed
+filter leaves that placement alone (moves in Roundcube or over IMAP; JMAP
+clients are not noticed,
+[the limits](https://github.com/the-boring-crocodile/boring-mailstack/blob/main/docs/USING.md#filing-and-filter-changes)),
+and makes Roundcube the mail front of your Nextcloud.
 Releases are rehearsed against a demo office that lives entirely in email;
 `tools/demo up` starts it on your machine
-([try it](https://github.com/the-boring-crocodile/boring-mailstack#try-it)).
+([try it](https://github.com/the-boring-crocodile/boring-mailstack#try-it-with-fictional-mail)).
 
 ---
 
